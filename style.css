@@ -1,15 +1,17 @@
 :root {
     --background: #f4f4f4;
     --foreground: #2C3E50;
-    --primary: #2C3E50;
+    --primary: black;
     --primary-foreground: #ffffff;
     --secondary: #ecf0f1;
     --secondary-foreground: #2C3E50;
-    --accent: #E67E22;
+    --accent: #F9BD0B;
+    --accent-two:#0F172A;
     --accent-foreground: #ffffff;
     --card: #ffffff;
     --card-foreground: #2C3E50;
     --border: #e0e0e0;
+    --fifth: #0F172A;
 }
 
 body {
@@ -109,7 +111,23 @@ header nav a:hover {
     text-decoration: none;
     transition: background-color 0.3s;
     background-color: var(--accent);
-    color: var(--accent-foreground);
+    color: black;
+    border: 1px solid transparent;
+    cursor: pointer;
+    
+}
+
+.button-two {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    background-color: var(--accent-two);
+    color: #ffffff;
     border: 1px solid transparent;
     cursor: pointer;
     
@@ -476,7 +494,7 @@ main {
 
 
 .contact-grid .card.primary {
-    background-color: var(--primary);
+    background-color: var(--fifth);
     color: var(--primary-foreground);
 }
 
@@ -506,6 +524,7 @@ footer {
     font-weight: bold;
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: black;
 }
 
 .footer-container ul {
