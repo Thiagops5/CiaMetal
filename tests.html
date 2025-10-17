@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Tests</title>
+    <style>
+        #test-results {
+            font-family: monospace;
+            white-space: pre;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carousel Tests</h1>
+    <div id="test-results"></div>
+
+    <!-- Carousel Structure -->
+    <div class="carousel" style="visibility: hidden; position: absolute;">
+        <div class="carousel-content">
+            <div class="carousel-item">Item 1</div>
+            <div class="carousel-item">Item 2</div>
+            <div class="carousel-item">Item 3</div>
+        </div>
+        <button class="carousel-prev">❮</button>
+        <button class="carousel-next">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const testResults = document.getElementById('test-results');
+
+        function runTest(name, testFn) {
+            try {
+                testFn();
+                testResults.innerHTML += `<div class="pass">PASS: ${name}</div>`;
+            } catch (e) {
+                testResults.innerHTML += `<div class="fail">FAIL: ${name}</div>`;
+                testResults.innerHTML += `<div class="fail">  ${e.stack}</div>`;
+            }
+        }
+
+        function assertEquals(actual, expected, message) {
+            if (actual !== expected) {
+                throw new Error(`${message} - Expected: ${expected}, Actual: ${actual}`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait for the main script to initialize
+            setTimeout(() => {
+                const nextButton = document.querySelector('.carousel-next');
+                const prevButton = document.querySelector('.carousel-prev');
+                
+                // Manually set totalItems for testing, as offsetWidth might be 0 in a hidden element
+                window.totalItems = 3;
+
+                runTest('Initial state should be index 0', () => {
+                    assertEquals(window.currentIndex, 0, 'Initial currentIndex should be 0');
+                });
+
+                runTest('Next button should advance to index 1', () => {
+                    nextButton.click();
+                    assertEquals(window.currentIndex, 1, 'currentIndex should be 1 after one click on next');
+                });
+
+                runTest('Next button should advance to index 2', () => {
+                    nextButton.click();
+                    assertEquals(window.currentIndex, 2, 'currentIndex should be 2 after two clicks on next');
+                });
+
+                runTest('Next button should loop back to index 0 from the last item', () => {
+                    nextButton.click();
+                    assertEquals(window.currentIndex, 0, 'currentIndex should loop back to 0');
+                });
+
+                runTest('Prev button should go to the last item (index 2) from the first item', () => {
+                    prevButton.click();
+                    assertEquals(window.currentIndex, 2, 'currentIndex should be 2 after clicking prev from the start');
+                });
+
+                runTest('Prev button should go to index 1', () => {
+                    prevButton.click();
+                    assertEquals(window.currentIndex, 1, 'currentIndex should be 1');
+                });
+
+            }, 100);
+        });
+    </script>
+</body>
+</html>
