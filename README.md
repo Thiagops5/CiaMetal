@@ -6,7 +6,7 @@ Este repositório contém o código-fonte do website institucional desenvolvido 
 
 ## 🚀 Site em Produção (Demo)
 
-**Visite o site em funcionamento:** [**https://link-para-o-seu-site.vercel.app**](https://link-para-o-seu-site.vercel.app)
+**Visite o site em funcionamento:** [**metalurgica-ciametal-ext.vercel.app**](metalurgica-ciametal-ext.vercel.app)
 
 *(Substitua o link acima pelo seu link real da Vercel)*
 
@@ -14,9 +14,8 @@ Este repositório contém o código-fonte do website institucional desenvolvido 
 
 ## 📸 Demonstração Visual
 
-*(Adicione aqui uma captura de ecrã ou um GIF do site. Pode fazer o upload da imagem para o repositório e colocar o link aqui)*
 
-![Demonstração do site CiaMetal](link-para-sua-imagem.png)
+![Demonstração do site CiaMetal](img/demonstração.png)
 
 ---
 
@@ -55,7 +54,7 @@ A lógica inicial (`currentIndex + 1`) foi substituída por um cálculo dinâmic
 * **Desenvolvimento Front-End:** Capacidade de construir um website completo e funcional do zero.
 * **Design Responsivo:** Habilidade para criar interfaces que se adaptam a diferentes tamanhos de ecrã.
 * **Depuração (Debugging):** Experiência prática na identificação e correção de *bugs* de layout (CSS) e lógica (JavaScript).
-* **Fluxo de Trabalho Git:** Proficiência no uso de comandos Git (`commit`, `push`, `branch`, `merge`) para gestão de código em equipa.
+* **Fluxo de Trabalho Git:** Proficiência no uso de comandos Git (`commit`, `push`, `branch`, `merge`) para gestão de código em equipe.
 * **Hospedagem e CI/CD:** Conhecimento prático do processo de *deploy* de uma aplicação web real na Vercel.
 
 ### Competências Comportamentais (Soft Skills)
@@ -65,8 +64,4 @@ A lógica inicial (`currentIndex + 1`) foi substituída por um cálculo dinâmic
 * Gestão de Tempo
 * Comunicação
 
-## 6. Possíveis Melhorias Futuras
 
-* Implementação de um formulário de contacto funcional (usando uma API *serverless*).
-* Otimização das imagens (uso de formatos como `.webp`).
-* Migração do projeto para um *framework* moderno como Next.js (como visto no "Projeto 2").
