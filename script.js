@@ -80,6 +80,35 @@ if (prevButton) {
     });
 }
 
+// Lógica de Swipe 
+let touchStartX = 0;
+let touchEndX = 0;
+const swipeThreshold = 50; // Mínimo de 50px de "arrasto" para mudar
+
+if (carouselContent) {
+    carouselContent.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true }); // {passive: true} melhora a performance no mobile
+
+    carouselContent.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+}
+
+function handleSwipe() {
+    // Swipe para a esquerda (próxima imagem)
+    if (touchStartX - touchEndX > swipeThreshold) {
+        if (nextButton) nextButton.click();
+    }
+
+    // Swipe para a direita (imagem anterior)
+    if (touchEndX - touchStartX > swipeThreshold) {
+        if (prevButton) prevButton.click();
+    }
+}
+//FIM: Lógica de Swipe
+
 window.addEventListener('resize', updateCarousel);
 
 
