@@ -59,7 +59,7 @@ A lógica inicial (`currentIndex + 1`) foi substituída por um cálculo dinâmic
 
 ### Competências Comportamentais (Soft Skills)
 
-* Trabalho em Equipa
+* Trabalho em Equipe
 * Resolução de Problemas
 * Gestão de Tempo
 * Comunicação
