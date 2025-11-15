@@ -25,7 +25,7 @@ O objetivo principal deste projeto de extensão é aplicar os conhecimentos teó
 
 A empresa escolhida para este projeto foi a **Metalúrgica CiaMetal**, uma serralheria local que necessitava de uma presença digital moderna para servir como portfólio online e canal de captação de clientes.
 
-## 2. Equipa
+## 2. Equipe
 
 * **Thiago Pacheco dos Santos** - RA: 60004984
 * **Glauter Junior Alberico** - RA: 60006591
