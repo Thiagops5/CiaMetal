@@ -553,6 +553,22 @@ footer {
     font-size: 0.875rem;
     color: #7f8c8d;
 }
+/* Estiliza o novo link de email no rodapé */
+.footer-link {
+    color: #7f8c8d; /* Mesma cor do texto 'li' */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--accent); /* Fica amarelo ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+/* Garante a cor correta no modo escuro */
+body[data-theme="dark"] .footer-link {
+    color: hsl(215 20.2% 65.1%); /* Mesma cor do 'li' no modo escuro */
+}
 
 /* LÓGICA DO MODO ESCURO --- */
 
