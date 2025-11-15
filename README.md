@@ -6,7 +6,7 @@ Este repositório contém o código-fonte do website institucional desenvolvido 
 
 ## 🚀 Site em Produção (Demo)
 
-**Visite o site em funcionamento:** [**metalurgica-ciametal-ext.vercel.app**](metalurgica-ciametal-ext.vercel.app)
+**Visite o site em funcionamento:** [**ciametal.vercel.app**](ciametal.vercel.app)
 
 *(Substitua o link acima pelo seu link real da Vercel)*
 
